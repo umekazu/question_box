@@ -1,0 +1,7 @@
+<div>質問編集</div>
+<%= form_for(@question) do |f|%>
+  <div><%= f.label :text%></div>
+  <div><%= f.text_field :text%></div>
+  <div><%= f.submit %></div>
+<% end %>
+<%= link_to '戻る', questions_path%>
