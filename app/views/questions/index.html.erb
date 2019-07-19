@@ -9,6 +9,8 @@
     <% @questions.each do |question| %>
       <tr>
         <td><%= question.text %></td>
+        <td><%= link_to '編集', edit_question_path(question)%>
+        <td><%= link_to '削除', question_path(question), method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
