@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
-    @newpost = Post.new(:question_id => params[:id])
+    @newpost = Post.new(question_id: params[:id])
     @posts = Post.where(question_id: params[:id])
   end
 
