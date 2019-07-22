@@ -1,0 +1,16 @@
+<h1><%= @question.text %></h1>
+<% @posts.each do |post| %>
+  <p>
+    <%= post.body %>
+    <%= link_to '削除', post_path(post), method: :delete %>
+  </p>
+<% end %>
+
+<%= form_for(@newpost) do |f|%>
+  <div><%= f.label :body%></div>
+  <div><%= f.text_field :body%></div>
+  <%= f.hidden_field :question_id %>
+  <div><%= f.submit %></div>
+<% end %>
+
+<%= link_to '戻る', questions_path%>

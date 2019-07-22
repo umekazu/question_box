@@ -1,5 +1,4 @@
 class QuestionsController < ApplicationController
-
   def index
     @questions = Question.all
   end
@@ -29,8 +28,15 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
+  def show
+    @question = Question.find(params[:id])
+    @newpost = Post.new(question_id: params[:id])
+    @posts = Post.where(question_id: params[:id])
+  end
+
   private
-    def question_params
-      params.require(:question).permit(:text)
-    end
+
+  def question_params
+    params.require(:question).permit(:text)
+  end
 end
