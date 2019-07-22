@@ -1,7 +1,13 @@
 class PostsController < ApplicationController
   def create
     @post = Post.create(post_params)
-    redirect_to question_path(@post)
+    redirect_to question_path(params[:post]['question_id'])
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+    redirect_to request.referrer || root_url
   end
 
   private
