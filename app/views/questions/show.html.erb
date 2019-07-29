@@ -10,7 +10,7 @@
   <div><%= f.label :body%></div>
   <div><%= f.text_field :body%></div>
   <%= f.hidden_field :question_id %>
-  <div><%= f.submit %></div>
+  <div><%= f.submit '新規投稿', class:'btn btn-primary' %></div>
 <% end %>
 
-<%= link_to '戻る', questions_path%>
+<%= link_to '戻る', questions_path, class:'btn btn-outline-primary' %>

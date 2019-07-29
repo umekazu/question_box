@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header class="navbar navbar-fixed-top navbar-default">
+      <div class="container">
+      <%= link_to "QuestionBox", '#', id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "ホーム", '#' %></li>
+            <li><%= link_to "質問一覧", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

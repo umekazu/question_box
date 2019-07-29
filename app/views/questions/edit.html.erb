@@ -2,6 +2,6 @@
 <%= form_for(@question) do |f|%>
   <div><%= f.label :text%></div>
   <div><%= f.text_field :text%></div>
-  <div><%= f.submit %></div>
+  <div><%= f.submit '更新', class:"btn btn-primary"%></div>
 <% end %>
-<%= link_to '戻る', questions_path%>
+<%= link_to '戻る', questions_path, class:'btn btn-outline-primary' %>
