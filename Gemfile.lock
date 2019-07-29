@@ -215,7 +215,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.1.0)
-  bootstrap (~> 4.2.1)
+  bootstrap
   bootstrap-sass
   byebug
   capybara (>= 2.15)
