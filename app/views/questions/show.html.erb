@@ -5,11 +5,12 @@
     <%= link_to '削除', post_path(post), method: :delete %>
   </p>
 <% end %>
-
-<%= form_for(@newpost) do |f|%>
-  <div><%= f.text_field :body, placeholder: "入力してください" %></div>
-  <%= f.hidden_field :question_id %>
-  <div><%= f.submit '新規投稿', class:'btn btn-primary' %></div>
-<% end %>
+<div class="form1">
+  <%= form_for(@newpost, html: {class: ''}) do |f|%>
+    <div><%= f.text_field :body, placeholder: "入力してください", class: 'text-center form-control' %></div>
+    <%= f.hidden_field :question_id %>
+    <div><%= f.submit '新規投稿', class:'btn btn-primary form-control' %></div>
+  <% end %>
+</div>
 
 <%= link_to '戻る', questions_path, class:'btn btn-outline-primary' %>
