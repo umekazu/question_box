@@ -1,7 +1,6 @@
-<div>質問編集</div>
+<h1>質問編集</h1>
 <%= form_for(@question) do |f|%>
-  <div><%= f.label :text%></div>
-  <div><%= f.text_field :text%></div>
-  <div><%= f.submit '更新', class:"btn btn-primary"%></div>
+  <div><%= f.text_field :text, placeholder: "入力してください", class: 'text-center form-control' %></div>
+  <div><%= f.submit '更新', class:"btn btn-primary form-control"%></div>
 <% end %>
 <%= link_to '戻る', questions_path, class:'btn btn-outline-primary' %>
